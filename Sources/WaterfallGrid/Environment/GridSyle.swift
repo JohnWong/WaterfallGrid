@@ -16,7 +16,7 @@ struct GridSyle {
     var columns: Int {
         #if os(OSX) || os(tvOS) || targetEnvironment(macCatalyst)
         return columnsInLandscape
-        #elseif os(watchOS)
+        #elseif os(watchOS) || os(visionOS)
         return columnsInPortrait
         #else
         let screenSize = UIScreen.main.bounds.size
